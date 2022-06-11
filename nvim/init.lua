@@ -1,0 +1,7 @@
+require "pl.colorscheme"
+require "pl.gitsigns"
+require "pl.options"
+require "pl.keymaps"
+require "pl.lsp"
+require "pl.plugins"
+require "pl.telescope"
