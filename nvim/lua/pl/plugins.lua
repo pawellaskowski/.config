@@ -53,6 +53,7 @@ return packer.startup(function(use)
     ft = { "html", "javascript", "typescript", "typescriptreact" },
     run = "yarn install",
   }
+  use { "williamboman/nvim-lsp-installer" }
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
