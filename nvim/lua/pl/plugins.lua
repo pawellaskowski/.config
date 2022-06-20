@@ -54,6 +54,8 @@ return packer.startup(function(use)
     run = "yarn install",
   }
   use { "williamboman/nvim-lsp-installer" }
+  use { 'kyazdani42/nvim-web-devicons' }
+  use { 'kyazdani42/nvim-tree.lua' }
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end

@@ -7,6 +7,7 @@ local options = {
   relativenumber = false,
   shiftwidth = 2,
   showtabline = 2,
+  signcolumn = "yes",
   splitbelow = true,
   splitright = true,
   termguicolors = true,
