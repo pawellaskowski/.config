@@ -34,28 +34,44 @@ packer.init {
 
 return packer.startup(function(use)
   use "wbthomason/packer.nvim"
-  use "folke/tokyonight.nvim"
+  use "williamboman/nvim-lsp-installer"
   use "neovim/nvim-lspconfig"
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-buffer"
   use "hrsh7th/cmp-path"
   use "L3MON4D3/LuaSnip"
+  use "kyazdani42/nvim-web-devicons"
+  use "kyazdani42/nvim-tree.lua"
   use "mkitt/tabline.vim"
+  use "nvim-lualine/lualine.nvim"
   use "lewis6991/gitsigns.nvim"
+  use "tpope/vim-fugitive"
+  use "akinsho/toggleterm.nvim"
+
   use {
     "nvim-telescope/telescope.nvim",
     requires = { {"nvim-lua/plenary.nvim"} }
   }
+
   use {"nvim-telescope/telescope-file-browser.nvim"}
+
   use {
     "prettier/vim-prettier",
     ft = { "html", "javascript", "typescript", "typescriptreact" },
     run = "yarn install",
   }
-  use { "williamboman/nvim-lsp-installer" }
-  use { 'kyazdani42/nvim-web-devicons' }
-  use { 'kyazdani42/nvim-tree.lua' }
+
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
+
+  -- use "folke/tokyonight.nvim"
+  -- use "tyrannicaltoucan/vim-deep-space"
+  -- use "jacoborus/tender.vim"
+  use "bluz71/vim-nightfly-guicolors"
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
